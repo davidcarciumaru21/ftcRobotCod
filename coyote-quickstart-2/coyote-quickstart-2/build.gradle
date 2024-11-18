@@ -1,0 +1,27 @@
+/**
+ * Top-level build file for ftc_app project.
+ *
+ * It is extraordinarily rare that you will ever need to edit this file.
+ */
+
+buildscript {
+    ext {
+        kotlin_version = '1.8.20' // Updated to a newer version
+    }
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.4.0' // Updated for Gradle 9.0 compatibility
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+// Project-wide repository settings
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}

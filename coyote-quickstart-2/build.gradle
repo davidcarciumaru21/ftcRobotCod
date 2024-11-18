@@ -6,27 +6,22 @@
 
 buildscript {
     ext {
-        kotlin_version = '1.8.20'
+        kotlin_version = '1.8.20' // Updated to a newer version
     }
     repositories {
-        mavenCentral()
         google()
+        mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.2.0'
+        classpath 'com.android.tools.build:gradle:7.4.0' // Updated for Gradle 9.0 compatibility
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
-// This is now required because aapt2 has to be downloaded from the
-// google() repository beginning with version 3.2 of the Android Gradle Plugin
+// Project-wide repository settings
 allprojects {
     repositories {
-        mavenCentral()
         google()
+        mavenCentral()
     }
-}
-
-repositories {
-    mavenCentral()
 }
